@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+        <header id="header">
+            <!--배경이미지 & 로고-->
+            <div class="topimg">
+                <img src = "{{ url_for('static', filename=question.img_url) }}">
+                <div class="tonedown"></div>
+                <div>
+                    <img class="logo" src="{{ url_for('static', filename='images/PLOP_logo_w.png') }}">
+                </div>
+            </div>
+            <!--앨범-->
+            <div class="topalbum">
+                <img src = "{{ url_for('static', filename=question.img_url) }}">
+            </div>
+
+            <div class="descript">
+                <div class="pl_color" style="background-color:{{ question.colors_code }};">{{ question.colors }}</div>
+                <!--플레이리스트 제목 넣기-->
+                <p style="color : #1C1C1C; font-weight : 600; font-size: 16px;">{{ question.subject }}</p>
+                <p>{{ question.content|markdown }}</p>
+            </div>
+        </header>
+        <section style="width: 100%; height: 620px;">
+            <div class="intro">
+                <h1> PLAYLIST </h1>
+                <p> plop이 추천해주는 노래를 들어보세요. </p>
+                <p> 이야기속으로 여행을 떠나는 자신을 발견할 수 있어요! </p>
+            </div>
+            <!--플레이리스트 박스-->
+            <div class="pl_box">
+                    <table class="pl_list">
+                        <!--1번-->
+                        {% if song_list_r %}
+                        {% for song in song_list_r %}
+
+                        <tr>
+                            <th class="pl_number" rowspan="2">{{loop.index}}</th>
+                            <td class="pl_title">{{song[0]}}</td>
+                        </tr>
+                        <tr>
+                            <td class="pl_artist">{{song[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                        {% endif %}
+                        <!--
+                        <tr>
+                            <th class="pl_number" rowspan="2">2</th>
+                            <td>봄여름가을겨울</td>
+                        </tr>
+                        <tr>
+                            <td class="pl_artist">빅뱅</td>
+                        </tr>
+
+                        <tr>
+                            <th class="pl_number" rowspan="2">3</th>
+                            <td>봄여름가을겨울</td>
+                        </tr>
+                        <tr>
+                            <td class="pl_artist">빅뱅</td>
+                        </tr>
+
+                        <tr>
+                            <th class="pl_number" rowspan="2">4</th>
+                            <td>봄여름가을겨울</td>
+                        </tr>
+                        <tr>
+                            <td class="pl_artist">빅뱅</td>
+                        </tr>
+
+                        <tr>
+                            <th class="pl_number" rowspan="2">5</th>
+                            <td>봄여름가을겨울</td>
+                        </tr>
+                        <tr>
+                            <td class="pl_artist">빅뱅</td>
+                        </tr>
+
+                        <tr>
+                            <th class="pl_number" rowspan="2">6</th>
+                            <td>봄여름가을겨울</td>
+                        </tr>
+                        <tr>
+                            <td class="pl_artist">빅뱅</td>
+                        </tr>
+
+                        <tr>
+                            <th class="pl_number" rowspan="2">7</th>
+                            <td>봄여름가을겨울</td>
+                        </tr>
+                        <tr>
+                            <td class="pl_artist">빅뱅</td>
+                        </tr>
+                        -->
+                    </table>
+                    <button class="pl_reset" onClick="window.location.reload()">새로고침</button>
+            </div>
+        </section>
+        <section style="width: 100%; height: 480px;">
+            <div class="intro">
+                <h1>MEMORY BOX</h1>
+                <p> PLOP은 상상을 통해 상기된 다양한 생각들을 </p>
+                <p>공유하고 서로 공감할 수 있는 메모리 박스를 제공합니다.</p>
+            </div>
+            <!--메모리박스 박스-->
+            <div class="mbox_box">
+                <img src = "{{ url_for('static', filename=question.img_url) }}">
+                <a
+                   class="mbox_enter"
+                   href="{{ url_for('question.community', question_id=question.id) }}">입장하기</a>
+            </div>
+        </section>
+
+
+        <footer>
+            <p style="margin: 0px 0px 6px 0px;">마루아트센터점<p>
+            <p>전화번호: 02 - 2223 - 2533</p>
+            <p>주소: 서울 종로구 인사동길 35-6 3F, 1F, B1 마루아트센터</p>
+            <p> 오시는 길: 3호선 안국역 6번출구에서 403m</p>
+            <p>매일 10:30 - 18:30</p>
+            <p style="margin: 10px 0px 0px 0px; font-size: 10px;">@ All righs reserved</p>
+        </footer>
+ </body>
+{% endblock %}
+

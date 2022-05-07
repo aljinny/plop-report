@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@700&display=swap');
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Podkova', serif;
+}
+
+/* 메인 레이아웃 스타일 */
+
+*{
+    font-family: 'Poppins';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+a:link, a:visited {
+    color : black;
+}
+
+header {
+    width: 100%;
+    height: 500px;
+}
+.topimg {
+    position: relative;
+    width: 100%;
+    height: 238px;
+    overflow: hidden;
+}
+.topimg div .logo {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: auto; height: auto;
+    max-width: 100px; max-height: 20px;
+}
+.logo {
+    fill : white;
+}
+.tonedown {
+    position: relative;
+    width: 100%;
+    height: 238px;
+    overflow: hidden;
+    background-color: black;
+    opacity: 0.4;
+}
+.topimg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.topalbum {
+    margin: 0 auto;
+    position: relative;
+    top: -83px;
+    width: 166px;
+    height: 166px;
+    border-radius: 0.5em;
+    background-color: white;
+    box-shadow: 0px 4px 4px #B7B7B7;
+}
+.topalbum img {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 150px;
+    height: 150px;
+    border-radius: 0.3em;
+    text-align: center;
+    object-fit: cover;
+    box-shadow: 0px 4px 4px #B7B7B7;
+}
+.pl_color {
+    position: relative;
+    width: 90px;
+    height: 23px;
+    margin:0 auto;
+    border-radius: 80px;;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    align-items: center;
+    text-align: center;
+    color: white;
+    top: -15px;
+}
+.descript {
+    position: relative;
+    top: -40px;
+}
+.descript p {
+    top:20px;
+    text-align: center;
+    font-family: Poppins;
+    font-weight : 400;
+    color: #636363;
+    font-size: 12px;
+    text-align:center;
+}
+
+.intro {
+    position: relative;
+    top: 40px;
+    width: auto;
+    height: 146px;
+    overflow: hidden;
+}
+
+.intro h1 {
+    position: relative;
+    left : 20px;
+    font-family: Podkova;
+    font-size: 30px;
+    font-weight : 700;
+    color : #37355F;
+}
+
+.intro p {
+    position: relative;
+    left : 20px;
+    font-family: Poppins;
+    font-weight : 400;
+    color: #B2B2B2;
+    font-size: 12px;
+    top:15px;
+    margin: 0;
+}
+
+.pl_box {
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    height: 445px;
+    width: 340px;
+    background-color: #F7F7F7;
+    border : 1px solid #DFDFDF;
+    border-radius: 0.25em;
+}
+.pl_list {
+    margin: 0 auto;
+    position: relative;
+    height: 34px;
+    width: 292px;
+    top: 25px;
+}
+
+.pl_list tr th {
+    position: relative;
+    width: 20px;
+    height: 34px;
+    left:4px;
+
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    color: #3E3B98;
+}
+.pl_list tr td {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+    left: 16px;
+    top: 4px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.pl_list .pl_artist {
+    top: -1px;
+    font-size: 12px;
+    color: #636363;
+}
+
+.pl_reset {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 290px;
+    height: 50px;
+    top: 50px;
+
+    border: 1px solid #3E3B98;
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+    color: #3E3B98;
+}
+
+.mbox_box {
+    position: relative;
+    margin: 0 auto;
+    top: 15px;
+    width: 90%;
+    height: 240px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.mbox_box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.mbox_enter {
+    display: block;
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 50px;
+    top : 175px;
+
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+
+    text-decoration:none;
+}
+
+.mbox_box a:link, a:visited {
+    color : black;
+}
+
+footer {
+    position: relative;
+    background-color: #263046;
+    width: 100%;
+    height: 160px;
+}
+
+footer p {
+    position: relative;
+    font-family: 'Podkova';
+    font-weight: 400;
+    font-size: 8px;
+
+    text-align: right;
+    margin: 4px 0px 4px 0px;
+    top: 24px;
+    right: 20px;
+
+    color: #FFFFFF;
+}
+
+/* 커뮤니티 스타일 */
+.memoryboxtop {
+    position: relative;
+    top:0px;
+    width: 100%;
+    height: 62px;
+
+    background: #3E3B98;
+}
+
+.memoryboxtop h1 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+
+    color: #FFFFFF;
+
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+.memoryboxtitle {
+    position: relative;
+    width: 100%;
+    height: 55px;
+
+    background: white;
+}
+
+.memoryboxtitle h1{
+    position: relative;
+
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #000000;
+
+    position: relative;
+    top: 18px;
+    text-align: center;
+}
+
+.write_enter {
+    display: block;
+    background-color: #3E3B98;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 50px;
+
+    border-radius: 10px;
+
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+
+    text-decoration:none;
+    color: white;
+
+    border: 0;
+    outline: 0;
+}
+
+.answernum {
+    position: relative;
+    display:block;
+
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #000000;
+    top: 10px;
+    margin: 20px 10px;
+
+}
+
+.answerline {
+    position: relative;
+    margin: 0 auto;
+    width:96%
+}
+
+.answerbox {
+    border-radius: 10px;
+    background-color: white;
+    margin: 16px;
+
+}
+
+.answerdate {
+    font-family: 'Poppins';
+
+    font-weight: 400;
+    font-size: 10px;
+
+    color: #B2B2B2;
+}
+
+.answertext{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+
+    color: #000000;
+}
