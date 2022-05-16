@@ -36,8 +36,7 @@ def detail(question_id):
     song_list_count = bugs_pl.query.filter(bugs_pl.plop_id == question_id).count()
     #song_list = bugs_pl.query.join(Question).filter(Question.id == 3)
     #메인 호출
-    #ran = random.sample(list(range(1,song_list_count)),7)
-    ran = [1,2,3,4,5,6,7]
+    ran = random.sample(list(range(1,song_list_count)),7)
     song_list_r = []
     for i, v in enumerate(song_list) :
         for r in ran :
